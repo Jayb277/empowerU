@@ -16,7 +16,7 @@ const ApplicantsTable = () => {
         console.log('called');
         try {
             axios.defaults.withCredentials = true;
-            const res = await axios.post(`${APPLICATION_API_END_POINT}/status/${id}/update`, { status });
+            const res = await axios.post(`https://empower-u-z0d1.onrender.com/api/v1/aplication/update`, { status });
             console.log(res);
             if (res.data.success) {
                 toast.success(res.data.message);
